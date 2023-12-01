@@ -1,0 +1,131 @@
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+}
+.inner{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-right .logo a,.header-left .utils li .icon-arrow,
+.sc-search .icon-search .icon,
+.sc-team .content .field .field-inner .num:after,
+.swiper .control .btn-prev,
+.swiper .control .btn-next,
+.sc-board .link-apply:after,
+.footer .footer-left .related-site .site-box:after
+{
+    background-image: url(../images/sp_pc.png);
+    background-size: 328px 205px;
+}
+select,input{
+    border-style: none;
+}
+select option{
+    font-weight: 400;
+}
+select option[value=""][disabled] {
+	display: none;
+}
+select option {
+    color: #000000;
+}
+select:focus,input:focus{
+    outline: none;
+}
+
+[class *= sc] .headline{
+    font-size: 64px;
+    line-height: 71px;
+    letter-spacing: -0.64px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+[class *= sc] .desc-area .desc{
+    font-family: 'NanumSquare' , sans-serif;
+    display: inline;
+    padding-right: 30px;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: -0.44px;
+    font-weight: 600;
+}
+
+[class *= sc] .desc-area .link-more{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    letter-spacing: -0.36px;
+}
+
+[class *= sc] .desc-area .link-more:before {
+    content: "";
+    display: block;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+.swiper {
+    position: relative;
+}
+.swiper .control{
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+}
+.swiper .control .btn-prev{
+    background-position: -187px -172px;
+    width: 32px;
+    height: 32px;
+}
+.swiper .control .btn-prev.swiper-button-disabled{
+    background-position: -224px -172px;
+}
+.swiper .control .btn-next{
+    background-position: -113px -172px;
+    width: 32px;
+    height: 32px;
+}
+.swiper .control .btn-next.swiper-button-disabled{
+    background-position: -150px -172px;
+}
+
+@media (max-width:768px) {
+    .inner {
+        min-width: 320px;
+        max-width: 1320px;
+        padding: 0 22px;
+        margin: 0;
+    }
+    [class *= sc] .headline{
+        margin-bottom: 11px;
+        font-size: 36px;
+        line-height: 50px;
+        letter-spacing: -0.7px;
+    }
+    [class *= sc] .desc-area .desc{
+        padding-right: 20px;
+        margin-bottom: 9px;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.32px;
+    }
+    [class *= sc] .desc-area .link-more{
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: -0.24px;
+    }
+}
