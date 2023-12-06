@@ -1,3 +1,5 @@
+//header sub메뉴 나오게 컨트롤
+
 $('.header-right .gnb-list .item').hover(function(){
   if($(this).find('.sub').length){
     $('.header').addClass('on');
@@ -52,25 +54,27 @@ $('.header-right .gnb-list .item').hover(function(){
           },
     });
 
+// 한글 영어 선택메뉴
+  $('.header-left .utils .lang').click(function(){
+      $('.header-left .utils .lang').toggleClass('on');
+    })
 
-    $('.header-left .utils .lang').click(function(){
-        $('.header-left .utils .lang').toggleClass('on');
-      })
+//관련사이트 박스 
 
-    $('.select-box').click(function(){
-        $(this).toggleClass('active');
-    });
-    $('.select-box').change(function(){
-      $(this).css('color','#000000');
+  $('.select-box').click(function(){
+      $(this).toggleClass('active');
   });
+  $('.select-box').change(function(){
+    $(this).css('color','#000000');
+});
 
-  $('#site-box').click(function(){
-    $('#site-select-box').addClass('active');
-  });
- 
-  $('#related-site-close').click(function(){
-    $('#site-select-box').removeClass('active');
-  });
+$('#site-box').click(function(){
+  $('#site-select-box').addClass('active');
+});
+
+$('#related-site-close').click(function(){
+  $('#site-select-box').removeClass('active');
+});
 
 
 $('.header-left .menu-wrap .btn-menu').click(function(){
@@ -85,6 +89,8 @@ $('.header-left .menu-wrap .menu-area .lang .text').click(function(){
   $(this).siblings().removeClass('on');
 })
 
+//서치 박스 on / off
+
 $('.sc-team .search-box').click(function(){
   $('.sc-team .search-wrap').addClass('on');
 })
@@ -92,46 +98,24 @@ $('.sc-team .search-wrap .btn-close').click(function(){
   $('.sc-team .search-wrap').removeClass('on');
 })
 
-$('.slide > .dropdown').click(function(){
-  if($(this).hasClass('on')){
-    $(this).removeClass('on');
-    $(this).siblings('ul').css("display","none");
-    
-  }else{
-    $(this).addClass('on');
-    $(this).siblings('ul').css("display","block");
-  }
-})
-$('.slide2 > .dropdown').click(function(){
-  if($(this).hasClass('on')){
-    $(this).removeClass('on');
-    $(this).siblings('ul').css("display","none");
-    
-  }else{
-    $(this).addClass('on');
-    $(this).siblings('ul').css("display","block");
-  }
-})
+// 초기에 아코디언 메뉴 닫기
+$('.slide > ul, .slide2 > ul').hide();
+
+// 아코디언 메뉴 토글
+$('.slide > .dropdown, .slide2 > .dropdown').click(function(){
+  $(this).toggleClass('on');
+  $(this).siblings('ul').slideToggle();
+});
+
+// 모든 선택 해제
 $('#all').click(function(){
-  if($(this).hasClass('on')){
-    $(this).removeClass('on');
-    $(this).children('span').css('background','#000');
-    $('.tech-item .bullet span').css('background','#000');
-  }else{
-    $(this).addClass('on');
-    $(this).children('span').css('background','#fff');
-    $('.tech-item .bullet span').css('background','#fff');
-  }
+  $(this).toggleClass('on');
+  $(this).children('span').css('background', $(this).hasClass('on') ? '#fff' : '#000');
+  $('.tech-item .bullet span').css('background', $(this).hasClass('on') ? '#fff' : '#000');
+});
 
-})
-
+// Bullet 컨트롤 토글
 $('.bullet').click(function(){
-  if($(this).hasClass('on')){
-    $(this).removeClass('on');
-    $(this).children('span').css('background','#000');
-  }else{
-    $(this).addClass('on');
-    $(this).children('span').css('background','#fff');
-  }
-
-})
+  $(this).toggleClass('on');
+  $(this).children('span').css('background', $(this).hasClass('on') ? '#fff' : '#000');
+});
