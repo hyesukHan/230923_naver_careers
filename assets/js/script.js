@@ -87,7 +87,7 @@ $('.header-left .menu-wrap .menu-area .menu-2dept').click(function(){
   $(this).toggleClass('on');
 })
 
-//언어 선택 
+//mobile 언어 선택 
 $('.header-left .menu-wrap .menu-area .lang .text').click(function(){
   $(this).addClass('on');
   $(this).siblings().removeClass('on');
