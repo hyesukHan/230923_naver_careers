@@ -77,6 +77,7 @@ $('#related-site-close').click(function(){
   $('#site-select-box').removeClass('active');
 });
 
+//mobile메뉴 on off
 
 $('.header-left .menu-wrap .btn-menu').click(function(){
   $('.header-left .menu-wrap').toggleClass('on');
@@ -85,6 +86,8 @@ $('.header-left .menu-wrap .btn-menu').click(function(){
 $('.header-left .menu-wrap .menu-area .menu-2dept').click(function(){
   $(this).toggleClass('on');
 })
+
+//언어 선택 
 $('.header-left .menu-wrap .menu-area .lang .text').click(function(){
   $(this).addClass('on');
   $(this).siblings().removeClass('on');
