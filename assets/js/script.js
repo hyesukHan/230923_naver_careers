@@ -59,15 +59,16 @@ $('.header-right .gnb-list .item').hover(function(){
       $('.header-left .utils .lang').toggleClass('on');
     })
 
-//관련사이트 박스 
-
+//select-box 버튼 이미지 변경
   $('.select-box').click(function(){
       $(this).toggleClass('active');
   });
+//select-box 글자색 바꿈
   $('.select-box').change(function(){
     $(this).css('color','#000000');
 });
 
+//관련사이트 박스 
 $('#site-box').click(function(){
   $('#site-select-box').addClass('active');
 });
